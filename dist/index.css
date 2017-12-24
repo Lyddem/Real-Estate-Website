@@ -1,4 +1,19 @@
-body {
- background-color: #e3e9ee;
+#header img {
+  align: right;
 }
+
+#header {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+html {
+  background-color: #c8f4e9;
+}
+
+#About {
+  padding: 30px;
+}
+
 
