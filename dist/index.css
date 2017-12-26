@@ -16,4 +16,18 @@ html {
   padding: 30px;
 }
 
+#about-container {
+  padding-left: 75px;
+  margin: auto;
+}
 
+#about {
+  padding-top: 50px;
+  float: left;
+}
+
+#contact {
+  padding-top: 50px;
+  padding-right: 50px;
+  float: right;
+}
