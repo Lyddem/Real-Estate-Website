@@ -24186,6 +24186,8 @@ var _Slideshow = __webpack_require__(102);
 
 var _Slideshow2 = _interopRequireDefault(_Slideshow);
 
+var _reactSlideshowImage = __webpack_require__(127);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -24194,13 +24196,25 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+// import slideOne from './slide1';
+// import slideTwo from './slide2';
+// import slideThree from './slide3';
+// import Slideshow from './Slideshow';
+// var Slider = require('react-slick');
+
+
 var Home = function (_React$Component) {
   _inherits(Home, _React$Component);
 
   function Home(props) {
     _classCallCheck(this, Home);
 
-    return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
+
+    _this.state = {
+      slidecount: 1
+    };
+    return _this;
   }
 
   _createClass(Home, [{
@@ -24209,7 +24223,8 @@ var Home = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement(_Header2.default, null)
+        _react2.default.createElement(_Header2.default, null),
+        _react2.default.createElement(_Slideshow2.default, null)
       );
     }
   }]);
@@ -32204,13 +32219,78 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactSlideshowImage = __webpack_require__(127);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var images = ['../../images/pic_1.jpg', '../../images/pic_2.jpg', '../../images/pic_3.jpg'];
+
+var Slideshow = function Slideshow() {
+  return _react2.default.createElement(_reactSlideshowImage.Slide, {
+    images: images,
+    duration: '5000',
+    transitionDuration: '1000'
+  });
+};
+
+exports.default = Slideshow;
+
+/***/ }),
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
+/* 109 */,
+/* 110 */,
+/* 111 */,
+/* 112 */,
+/* 113 */,
+/* 114 */,
+/* 115 */,
+/* 116 */,
+/* 117 */,
+/* 118 */,
+/* 119 */,
+/* 120 */,
+/* 121 */,
+/* 122 */,
+/* 123 */,
+/* 124 */,
+/* 125 */,
+/* 126 */,
+/* 127 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_slideshow_slide__ = __webpack_require__(128);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Slide", function() { return __WEBPACK_IMPORTED_MODULE_0__components_slideshow_slide__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_slideshow_fade__ = __webpack_require__(131);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Fade", function() { return __WEBPACK_IMPORTED_MODULE_1__components_slideshow_fade__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_slideshow_zoom__ = __webpack_require__(134);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Zoom", function() { return __WEBPACK_IMPORTED_MODULE_2__components_slideshow_zoom__["a"]; });
+
+
+
+
+/***/ }),
+/* 128 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__slide_css__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__slide_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__slide_css__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -32218,24 +32298,696 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Slideshow = function (_React$Component) {
-  _inherits(Slideshow, _React$Component);
+
+
+
+
+
+var Slideshow = function (_Component) {
+  _inherits(Slideshow, _Component);
 
   function Slideshow(props) {
     _classCallCheck(this, Slideshow);
 
-    return _possibleConstructorReturn(this, (Slideshow.__proto__ || Object.getPrototypeOf(Slideshow)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Slideshow.__proto__ || Object.getPrototypeOf(Slideshow)).call(this, props));
+
+    _this.state = {
+      index: 0
+    };
+    _this.width = 0;
+    _this.imageContainer = null;
+    _this.timeout = null;
+    return _this;
   }
 
   _createClass(Slideshow, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.allImages = document.querySelectorAll('.images-wrap div');
+      this.width = document.querySelector('.slideshow-wrapper').clientWidth;
+      this.setWidth();
+      this.addResizeListener();
+    }
+  }, {
+    key: 'setWidth',
+    value: function setWidth() {
+      var fullwidth = this.width * (this.props.images.length + 2);
+      this.imageContainer.style.width = fullwidth + 'px';
+      this.imageContainer.style.transform = 'translate(-' + this.width * (this.state.index + 1) + 'px)';
+      this.applySlideStyle();
+    }
+  }, {
+    key: 'addResizeListener',
+    value: function addResizeListener() {
+      var _this2 = this;
+
+      window.addEventListener('resize', function () {
+        _this2.width = document.querySelector('.slideshow-wrapper').clientWidth;
+        _this2.setWidth();
+      });
+    }
+  }, {
+    key: 'applySlideStyle',
+    value: function applySlideStyle() {
+      var _this3 = this;
+
+      this.allImages.forEach(function (eachImage, index) {
+        eachImage.style.width = _this3.width + 'px';
+      });
+    }
+  }, {
     key: 'render',
-    value: function render() {}
+    value: function render() {
+      var _this4 = this;
+
+      var _props = this.props,
+          images = _props.images,
+          duration = _props.duration;
+      var index = this.state.index;
+
+      var style = {
+        transform: 'translate(-' + (index + 1) * this.width + 'px)'
+      };
+      this.timeout = setTimeout(function () {
+        return _this4.slideImages('next');
+      }, duration);
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'container' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'nav', onClick: function onClick() {
+              return _this4.slideImages('prev');
+            } },
+          ' ',
+          '<',
+          ' '
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'slideshow-wrapper slide' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            {
+              className: 'images-wrap',
+              style: style,
+              ref: function ref(wrap) {
+                return _this4.imageContainer = wrap;
+              }
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'div',
+              { 'data-index': '-1' },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { alt: '', src: images[images.length - 1] })
+            ),
+            images.map(function (each, key) {
+              return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                {
+                  'data-index': key,
+                  key: key,
+                  className: key === index ? 'active' : ''
+                },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { alt: '', src: each })
+              );
+            }),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'div',
+              { 'data-index': '-1' },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { alt: '', src: images[0] })
+            )
+          )
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'nav', onClick: function onClick() {
+              return _this4.slideImages('next');
+            } },
+          ' ',
+          '>',
+          ' '
+        )
+      );
+    }
+  }, {
+    key: 'slideImages',
+    value: function slideImages(type) {
+      var _this5 = this;
+
+      var index = this.state.index;
+      var images = this.props.images;
+
+      clearTimeout(this.timeout);
+      index = type === 'next' ? index + 1 : index - 1;
+      this.imageContainer.style.transition = 'all ' + this.props.transitionDuration / 1000 + 's';
+      this.imageContainer.style.transform = 'translate(-' + this.width * (index + 1) + 'px)';
+      setTimeout(function () {
+        _this5.imageContainer.style.transition = 'none';
+        _this5.setState({
+          index: index < 0 ? images.length - 1 : index >= images.length ? 0 : index
+        });
+      }, this.props.transitionDuration);
+    }
   }]);
 
   return Slideshow;
-}(_react2.default.Component);
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
-exports.default = Slideshow;
+Slideshow.defaultProps = {
+  duration: 5000,
+  transitionDuration: 1000
+};
+
+Slideshow.PropTypes = {
+  images: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.array.isRequired,
+  duration: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.number,
+  transitionDuration: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.number
+};
+/* harmony default export */ __webpack_exports__["a"] = (Slideshow);
+
+/***/ }),
+/* 129 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(130);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(100)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../css-loader/index.js!./slide.css", function() {
+			var newContent = require("!!../../../../css-loader/index.js!./slide.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 130 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(99)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".slideshow-wrapper.slide {\n  width: 100%;\n  overflow: hidden; }\n\n.slideshow-wrapper .images-wrap {\n  display: flex;\n  flex-wrap: wrap; }\n  .slideshow-wrapper .images-wrap div img {\n    width: 100%; }\n\n.container {\n  display: flex;\n  align-items: center; }\n  .container .nav {\n    height: 30px;\n    background: rgba(255, 255, 255, 0.6);\n    width: 30px;\n    z-index: 10;\n    line-height: 30px;\n    font-size: 20px;\n    text-align: center;\n    cursor: pointer;\n    color: #fff;\n    border-radius: 15px; }\n    .container .nav:hover {\n      background: white;\n      color: #666; }\n    .container .nav:first-of-type {\n      margin-right: -30px; }\n    .container .nav:last-of-type {\n      margin-left: -30px; }\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 131 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__fade_css__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__fade_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__fade_css__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+var Fade = function (_Component) {
+  _inherits(Fade, _Component);
+
+  function Fade(props) {
+    _classCallCheck(this, Fade);
+
+    var _this = _possibleConstructorReturn(this, (Fade.__proto__ || Object.getPrototypeOf(Fade)).call(this, props));
+
+    _this.state = {
+      images: []
+    };
+    _this.imageRefs = [];
+    _this.width = 0;
+    _this.height = 0;
+    _this.timeout = null;
+    _this.imageContainer = null;
+    _this.getImageDim = _this.getImageDim.bind(_this);
+    return _this;
+  }
+
+  _createClass(Fade, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      var _this2 = this;
+
+      this.timeout = setTimeout(function () {
+        return _this2.fadeImages('next');
+      }, this.props.duration);
+      this.setState({
+        images: this.props.images.reverse()
+      });
+    }
+  }, {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.width = document.querySelector('.fade-wrapper').clientWidth;
+      this.applyStyle();
+      this.addResizeListener();
+    }
+  }, {
+    key: 'getImageDim',
+    value: function getImageDim() {
+      this.height = this.imageContainer.children[0].clientHeight;
+      this.imageContainer.style.height = this.height + 'px';
+    }
+  }, {
+    key: 'addResizeListener',
+    value: function addResizeListener() {
+      var _this3 = this;
+
+      window.addEventListener('resize', function () {
+        _this3.width = document.querySelector('.fade-wrapper').clientWidth;
+        _this3.applyStyle();
+      });
+    }
+  }, {
+    key: 'applyStyle',
+    value: function applyStyle() {
+      var _this4 = this;
+
+      this.imageRefs.forEach(function (eachImage, index) {
+        eachImage.style.width = _this4.width + 'px';
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this5 = this;
+
+      var type = this.props.type;
+      var images = this.state.images;
+
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'container' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'nav', onClick: function onClick() {
+              return _this5.fadeImages('prev');
+            } },
+          ' ',
+          '<',
+          ' '
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'fade-wrapper ' + type },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            {
+              className: 'images-wrap',
+              ref: function ref(wrap) {
+                return _this5.imageContainer = wrap;
+              }
+            },
+            images.map(function (each, key) {
+              return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                {
+                  ref: function ref(el) {
+                    _this5.imageRefs.push(el);
+                  },
+                  onLoad: key === 0 ? _this5.getImageDim : null,
+                  'data-index': key,
+                  key: key
+                },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { alt: '', src: each })
+              );
+            })
+          )
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'nav', onClick: function onClick() {
+              return _this5.fadeImages('next');
+            } },
+          ' ',
+          '>',
+          ' '
+        )
+      );
+    }
+  }, {
+    key: 'fadeImages',
+    value: function fadeImages(type) {
+      var _this6 = this;
+
+      var images = this.state.images;
+
+      var newImageArr = [];
+      clearTimeout(this.timeout);
+      var lastImage = this.imageContainer.children[images.length - 1];
+      if (type === 'prev') {
+        newImageArr = images.slice(1);
+        newImageArr.splice(newImageArr.length - 1, 0, images[0]);
+        this.setState({ images: newImageArr });
+        newImageArr = images.slice(1, images.length);
+        newImageArr.splice(newImageArr.length, 0, images[0]);
+      } else {
+        newImageArr = [images[images.length - 1]].concat(images.slice(0, images.length - 1));
+      }
+      lastImage.style.transition = 'all ' + this.props.transitionDuration / 1000 + 's';
+      lastImage.style.opacity = '0';
+      setTimeout(function () {
+        lastImage.style.opacity = '1';
+        lastImage.style.transition = 'none';
+        _this6.timeout = setTimeout(function () {
+          return _this6.fadeImages('next');
+        }, _this6.props.duration);
+        _this6.setState({ images: newImageArr });
+      }, this.props.transitionDuration);
+    }
+  }]);
+
+  return Fade;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+Fade.defaultProps = {
+  duration: 5000,
+  transitionDuration: 1000
+};
+
+Fade.PropTypes = {
+  images: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.array.isRequired,
+  duration: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.number,
+  transitionDuration: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.number
+};
+/* harmony default export */ __webpack_exports__["a"] = (Fade);
+
+/***/ }),
+/* 132 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(133);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(100)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../css-loader/index.js!./fade.css", function() {
+			var newContent = require("!!../../../../css-loader/index.js!./fade.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 133 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(99)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".fade-wrapper {\n  width: 100%;\n  overflow: hidden; }\n  .fade-wrapper .images-wrap {\n    display: flex;\n    flex-wrap: wrap; }\n    .fade-wrapper .images-wrap div {\n      position: absolute; }\n      .fade-wrapper .images-wrap div img {\n        width: 100%; }\n\n.container {\n  display: flex;\n  align-items: center; }\n  .container .nav {\n    height: 30px;\n    background: rgba(255, 255, 255, 0.6);\n    width: 30px;\n    z-index: 10;\n    line-height: 30px;\n    font-size: 20px;\n    text-align: center;\n    cursor: pointer;\n    color: #fff;\n    border-radius: 15px; }\n    .container .nav:hover {\n      background: white;\n      color: #666; }\n    .container .nav:first-of-type {\n      margin-right: -30px; }\n    .container .nav:last-of-type {\n      margin-left: -30px; }\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 134 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__zoom_css__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__zoom_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__zoom_css__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+var Zoom = function (_Component) {
+  _inherits(Zoom, _Component);
+
+  function Zoom(props) {
+    _classCallCheck(this, Zoom);
+
+    var _this = _possibleConstructorReturn(this, (Zoom.__proto__ || Object.getPrototypeOf(Zoom)).call(this, props));
+
+    _this.state = {
+      images: []
+    };
+    _this.imageRefs = [];
+    _this.width = 0;
+    _this.height = 0;
+    _this.timeout = null;
+    _this.imageContainer = null;
+    _this.getImageDim = _this.getImageDim.bind(_this);
+    return _this;
+  }
+
+  _createClass(Zoom, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      var _this2 = this;
+
+      this.timeout = setTimeout(function () {
+        return _this2.fadeImages('next');
+      }, this.props.duration);
+      this.setState({
+        images: this.props.images.reverse()
+      });
+    }
+  }, {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.width = document.querySelector('.zoom-wrapper').clientWidth;
+      this.applyStyle();
+      this.addResizeListener();
+    }
+  }, {
+    key: 'getImageDim',
+    value: function getImageDim() {
+      this.height = this.imageContainer.children[0].clientHeight;
+      this.imageContainer.style.height = this.height + 'px';
+    }
+  }, {
+    key: 'addResizeListener',
+    value: function addResizeListener() {
+      var _this3 = this;
+
+      window.addEventListener('resize', function () {
+        _this3.width = document.querySelector('.zoom-wrapper').clientWidth;
+        _this3.applyStyle();
+      });
+    }
+  }, {
+    key: 'applyStyle',
+    value: function applyStyle() {
+      var _this4 = this;
+
+      this.imageRefs.forEach(function (eachImage, index) {
+        eachImage.style.width = _this4.width + 'px';
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this5 = this;
+
+      var type = this.props.type;
+      var images = this.state.images;
+
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'container' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'nav', onClick: function onClick() {
+              return _this5.fadeImages('prev');
+            } },
+          ' ',
+          '<',
+          ' '
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'zoom-wrapper ' + type },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            {
+              className: 'images-wrap',
+              ref: function ref(wrap) {
+                return _this5.imageContainer = wrap;
+              }
+            },
+            images.map(function (each, key) {
+              return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                {
+                  ref: function ref(el) {
+                    _this5.imageRefs.push(el);
+                  },
+                  onLoad: key === 0 ? _this5.getImageDim : null,
+                  'data-index': key,
+                  key: key
+                },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { alt: '', src: each })
+              );
+            })
+          )
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'nav', onClick: function onClick() {
+              return _this5.fadeImages('next');
+            } },
+          ' ',
+          '>',
+          ' '
+        )
+      );
+    }
+  }, {
+    key: 'fadeImages',
+    value: function fadeImages(type) {
+      var _this6 = this;
+
+      var images = this.state.images;
+
+      var newImageArr = [];
+      clearTimeout(this.timeout);
+      var lastImage = this.imageContainer.children[images.length - 1];
+      if (type === 'prev') {
+        newImageArr = images.slice(1);
+        newImageArr.splice(newImageArr.length - 1, 0, images[0]);
+        this.setState({ images: newImageArr });
+        newImageArr = images.slice(1, images.length);
+        newImageArr.splice(newImageArr.length, 0, images[0]);
+      } else {
+        newImageArr = [images[images.length - 1]].concat(images.slice(0, images.length - 1));
+      }
+      lastImage.style.transition = 'all ' + this.props.transitionDuration / 1000 + 's';
+      lastImage.style.opacity = '0';
+      lastImage.style.transform = 'scale(' + this.props.scale + ')';
+      setTimeout(function () {
+        lastImage.style.opacity = '1';
+        lastImage.style.transform = 'scale(1)';
+        lastImage.style.transition = 'none';
+        _this6.timeout = setTimeout(function () {
+          return _this6.fadeImages('next');
+        }, _this6.props.duration);
+        _this6.setState({ images: newImageArr });
+      }, this.props.transitionDuration);
+    }
+  }]);
+
+  return Zoom;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+Zoom.defaultProps = {
+  duration: 5000,
+  transitionDuration: 1000
+};
+
+Zoom.PropTypes = {
+  images: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.array.isRequired,
+  duration: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.number,
+  transitionDuration: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.number,
+  scale: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string.isRequired
+};
+/* harmony default export */ __webpack_exports__["a"] = (Zoom);
+
+/***/ }),
+/* 135 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(136);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(100)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../css-loader/index.js!./zoom.css", function() {
+			var newContent = require("!!../../../../css-loader/index.js!./zoom.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 136 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(99)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".zoom-wrapper {\n  width: 100%;\n  overflow: hidden; }\n  .zoom-wrapper .images-wrap {\n    display: flex;\n    flex-wrap: wrap; }\n    .zoom-wrapper .images-wrap div {\n      position: absolute; }\n      .zoom-wrapper .images-wrap div img {\n        width: 100%; }\n\n.container {\n  display: flex;\n  align-items: center; }\n  .container .nav {\n    height: 30px;\n    background: rgba(255, 255, 255, 0.6);\n    width: 30px;\n    z-index: 10;\n    line-height: 30px;\n    font-size: 20px;\n    text-align: center;\n    cursor: pointer;\n    color: #fff;\n    border-radius: 15px; }\n    .container .nav:hover {\n      background: white;\n      color: #666; }\n    .container .nav:first-of-type {\n      margin-right: -30px; }\n    .container .nav:last-of-type {\n      margin-left: -30px; }\n", ""]);
+
+// exports
+
 
 /***/ })
 /******/ ]);
