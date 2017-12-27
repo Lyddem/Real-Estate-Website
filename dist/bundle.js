@@ -32227,12 +32227,12 @@ var _reactSlideshowImage = __webpack_require__(127);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var images = ['../../images/pic_1.jpg', '../../images/pic_2.jpg', '../../images/pic_3.jpg'];
+var images = ['../../images/pic_1.jpg', '../../images/pic_2.jpg', '../../images/pic_3.jpg', '../../images/pic_4.jpg', '../../images/pic_5.jpg'];
 
 var Slideshow = function Slideshow() {
   return _react2.default.createElement(_reactSlideshowImage.Slide, {
     images: images,
-    duration: '5000',
+    duration: '4000',
     transitionDuration: '1000'
   });
 };
