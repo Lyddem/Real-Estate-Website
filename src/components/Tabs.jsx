@@ -30,7 +30,6 @@ class Tabs extends React.Component {
           <Link to="/Home">
             <NavItem>
               <NavLink
-              
                 className={classnames ({ active:this.state.activeTab === 'Home'})}
                 onClick={() => { this.toggle('Home'); }} >
                 Home
@@ -62,7 +61,7 @@ class Tabs extends React.Component {
                 className={classnames ({ active:this.state.activeTab === 'Search Properties'})}
                 onClick={() => { this.toggle('Search Properties'); }}
               >
-              Search Properties 
+              Search Properties
               </NavLink>
             </NavItem>
             </Link>

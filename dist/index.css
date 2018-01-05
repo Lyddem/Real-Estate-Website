@@ -1,15 +1,15 @@
+html {
+  background-color: #d7f0f4;
+}
+
 #header img {
   align: right;
 }
 
 #header {
   text-align: center;
-  padding-top: 50px;
+  padding-top: 30px;
   padding-bottom: 10px;
-}
-
-html {
-  background-color: #c8f4e9;
 }
 
 #About {
@@ -31,3 +31,26 @@ html {
   padding-right: 50px;
   float: right;
 }
+
+#footer {
+  height: 45px;
+  background-color: grey;
+}
+
+#footer-container {
+  margin: auto;
+}
+
+#name {
+  float: left;
+}
+
+#phone {
+  float: right;
+}
+
+#pw-pic {
+  height: 35px;
+  width: 45px;
+}
+
